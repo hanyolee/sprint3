@@ -29,11 +29,15 @@
 ## curl TEST example
 
 - **전체조회**
+  - (정렬(create_at 기준) ?orderBy=desc(내림차순)  or ?dorderBy=asc(오름차순))
   ```bash
   curl localhost:3000/product
+  curl localhost:3000/product?orderBy=desc
+  curl localhost:3000/product?orderBy=asc
   ```
 
 - **상세조회** (id 값으로)
+  - (정렬(create_at 기준) ?orderBy=desc(내림차순)  or ?dorderBy=asc(오름차순))
   ```bash
   curl localhost:3000/product/3
   ```
