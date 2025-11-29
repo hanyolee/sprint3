@@ -1,28 +1,8 @@
-# 🔥 궁극 요약 (5초 컷)
-종류	데이터 위치	예시	용도
-req.query	URL ?뒤	/product?name=pc	검색·필터·정렬
-req.params	URL 경로 변수	/product/3	특정 리소스 조회/삭제
-req.body	요청 본문(body)	POST로 JSON 전송	글 작성, 회원가입 등 데이터 생성
+# 📌 Express Request Data 종류 정리 (`req.query`, `req.params`, `req.body`)
 
+| 종류 | 데이터 위치 | 예시 | 용도 |
+|------|-------------|-------|--------|
+| **`req.query`** | URL `?` 뒤(Query String) | `/products?name=pc` | 검색 · 필터 · 정렬 |
+| **`req.params`** | URL 경로(동적 파라미터) | `/products/3` | 특정 리소스 조회/삭제 |
+| **`req.body`** | 요청 본문(Body) | `{ "name": "pc", "price": 20000 }` | 데이터 생성/수정 (POST, PUT, PATCH) |
 
-# 🧠 완전히 이해되는 예시
-✔ 검색(필터)
-GET /products?keyword=pc
-
-----
-
-→ req.query.keyword
-
-✔ 특정 상품 조회
-GET /products/12
-
-
-→ req.params.id = 12
-
-✔ 상품 등록
-POST /products
-body = { name: "...", price: 20000 }
-
-
-→ req.body.name
-→ req.body.price
