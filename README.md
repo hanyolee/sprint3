@@ -128,3 +128,5 @@
   -F "image=@images/dog.png"
   ```
 
+수정
+
